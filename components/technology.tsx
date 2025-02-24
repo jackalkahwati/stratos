@@ -1,8 +1,8 @@
 'use client'
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import { Flame, Gauge, Shield, Zap, Thermometer, Target, Settings, BarChart2 } from "lucide-react"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs"
 import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Legend, ResponsiveContainer } from "recharts"
 
 // Previous constants remain unchanged
@@ -197,92 +197,116 @@ const ComparisonChart = () => {
 
 export default function Technology() {
   return (
-    <section className="container py-24 sm:py-32">
-      <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Technology</h2>
-        <p className="mt-6 text-lg text-muted-foreground">
-          The Stratos Spaceplane is built on cutting-edge propulsion and materials science, ensuring optimal performance
-          across multiple flight regimes.
-        </p>
-      </div>
-      <div className="mx-auto mt-16 max-w-5xl">
-        <Tabs defaultValue="propulsion" className="space-y-8">
-          <TabsList className="grid w-full grid-cols-4">
-            <TabsTrigger value="propulsion">Propulsion Modes</TabsTrigger>
-            <TabsTrigger value="helium">Helium Injection</TabsTrigger>
-            <TabsTrigger value="materials">Materials</TabsTrigger>
-            <TabsTrigger value="comparison">System Comparison</TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="propulsion">
-            <div className="grid gap-8 md:grid-cols-3">
-              {propulsionModes.map((mode) => (
-                <Card key={mode.title}>
+    <section className="py-24">
+      <div className="container">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our Technology</h2>
+          <p className="mt-4 text-muted-foreground">
+            Pioneering the next generation of space access with our innovative spaceplane technology.
+          </p>
+        </div>
+        <div className="mx-auto mt-16">
+          <Tabs defaultValue="propulsion" className="space-y-8">
+            <TabsList className="grid w-full grid-cols-3">
+              <TabsTrigger value="propulsion">Propulsion</TabsTrigger>
+              <TabsTrigger value="aerodynamics">Aerodynamics</TabsTrigger>
+              <TabsTrigger value="materials">Materials</TabsTrigger>
+            </TabsList>
+            <TabsContent value="propulsion" className="space-y-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Combined-Cycle Engine</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>
+                    Our revolutionary propulsion system seamlessly transitions between air-breathing and rocket modes,
+                    enabling efficient operation from sea level to orbital velocity.
+                  </p>
+                </CardContent>
+              </Card>
+              <div className="grid gap-4 md:grid-cols-2">
+                <Card>
                   <CardHeader>
-                    <CardTitle>{mode.title}</CardTitle>
-                    <p className="text-sm font-medium text-primary">{mode.speed}</p>
+                    <CardTitle>Ramjet Mode</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">{mode.description}</p>
+                    <p>Efficient supersonic propulsion from Mach 3 to Mach 6.</p>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
-          </TabsContent>
-
-          <TabsContent value="helium">
-            <div className="space-y-8">
-              <div className="grid gap-8 md:grid-cols-2">
-                {heliumBenefits.map((benefit) => (
-                  <Card key={benefit.title}>
-                    <CardHeader>
-                      <benefit.icon className="h-8 w-8 text-primary" />
-                      <CardTitle className="mt-4">{benefit.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="mb-4 text-muted-foreground">{benefit.description}</p>
-                      <ul className="space-y-2">
-                        {benefit.details.map((detail) => (
-                          <li key={detail} className="flex items-center gap-2">
-                            <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                            <span className="text-sm text-muted-foreground">{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                ))}
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Scramjet Mode</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>Advanced hypersonic propulsion from Mach 6 to Mach 12.</p>
+                  </CardContent>
+                </Card>
               </div>
-            </div>
-          </TabsContent>
-
-          <TabsContent value="materials">
-            <div className="grid gap-8 md:grid-cols-3">
-              {materials.map((material) => (
-                <Card key={material.title}>
+            </TabsContent>
+            <TabsContent value="aerodynamics" className="space-y-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Waverider Design</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>
+                    Advanced aerodynamic configuration that uses the shock wave generated by the vehicle to enhance lift
+                    and reduce drag at hypersonic speeds.
+                  </p>
+                </CardContent>
+              </Card>
+              <div className="grid gap-4 md:grid-cols-2">
+                <Card>
                   <CardHeader>
-                    <material.icon className="h-8 w-8 text-primary" />
-                    <CardTitle className="mt-4">{material.title}</CardTitle>
+                    <CardTitle>Variable Geometry</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">{material.description}</p>
+                    <p>Adaptable wing configuration for optimal performance across all speed regimes.</p>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
-          </TabsContent>
-
-          <TabsContent value="comparison">
-            <Card>
-              <CardHeader>
-                <CardTitle>System Performance Comparison</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ComparisonChart />
-              </CardContent>
-            </Card>
-          </TabsContent>
-        </Tabs>
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Thermal Management</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>Innovative cooling systems to handle extreme temperatures during hypersonic flight.</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </TabsContent>
+            <TabsContent value="materials" className="space-y-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Advanced Composites</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>
+                    Cutting-edge materials that combine lightweight properties with exceptional strength and thermal
+                    resistance.
+                  </p>
+                </CardContent>
+              </Card>
+              <div className="grid gap-4 md:grid-cols-2">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Thermal Protection</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>Next-generation heat shields for reliable atmospheric reentry.</p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Propulsion Materials</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>High-temperature alloys and ceramics for engine components.</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
       </div>
     </section>
   )
