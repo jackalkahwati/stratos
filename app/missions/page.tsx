@@ -1,7 +1,7 @@
-import { MissionsHero } from "@/components/missions/hero"
-import { MissionTypes } from "@/components/missions/types"
-import { MissionCapabilities } from "@/components/missions/capabilities"
-import { MissionPlanning } from "@/components/missions/planning"
+import { MissionsHero } from "../../components/missions/hero"
+import { MissionTypes } from "../../components/missions/types"
+import { MissionCapabilities } from "../../components/missions/capabilities"
+import { MissionPlanning } from "../../components/missions/planning"
 
 export default function MissionsPage() {
   return (

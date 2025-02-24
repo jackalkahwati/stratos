@@ -39,44 +39,42 @@ const capabilities = [
 
 export function MissionCapabilities() {
   return (
-    <section className="container py-24">
-      <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Operational Capabilities</h2>
-        <p className="mt-4 text-muted-foreground">
-          End-to-end mission support with flexible payload integration and rapid turnaround times.
-        </p>
-      </div>
-      <div className="mx-auto mt-16 max-w-5xl space-y-12">
-        {capabilities.map((capability, index) => (
-          <Card key={capability.title}>
-            <div className={`grid md:grid-cols-2 ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
-              <div className="relative min-h-[300px]">
-                <Image
-                  src={capability.image || "/placeholder.svg"}
-                  alt={capability.title}
-                  fill
-                  className="object-cover rounded-t-lg md:rounded-l-lg"
-                />
-              </div>
-              <div className="p-6">
-                <CardHeader>
-                  <CardTitle>{capability.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-4 text-muted-foreground">{capability.description}</p>
-                  <ul className="space-y-2">
-                    {capability.specs.map((spec) => (
-                      <li key={spec} className="flex items-center gap-2">
-                        <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                        <span className="text-sm text-muted-foreground">{spec}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </div>
+    <section className="py-24 bg-slate-50">
+      <div className="container">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Mission Capabilities</h2>
+          <p className="mt-4 text-muted-foreground">
+            Our advanced spaceplane platform offers unmatched capabilities for diverse space operations.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-5xl">
+          <dl className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-lg border bg-card p-6">
+              <dt className="font-semibold">Payload Capacity</dt>
+              <dd className="mt-2 text-muted-foreground">Up to 2,000 kg to Low Earth Orbit</dd>
             </div>
-          </Card>
-        ))}
+            <div className="rounded-lg border bg-card p-6">
+              <dt className="font-semibold">Orbital Altitudes</dt>
+              <dd className="mt-2 text-muted-foreground">160 km to 2,000 km</dd>
+            </div>
+            <div className="rounded-lg border bg-card p-6">
+              <dt className="font-semibold">Launch Frequency</dt>
+              <dd className="mt-2 text-muted-foreground">Weekly launches with 24-hour turnaround</dd>
+            </div>
+            <div className="rounded-lg border bg-card p-6">
+              <dt className="font-semibold">Mission Duration</dt>
+              <dd className="mt-2 text-muted-foreground">Up to 14 days in orbit</dd>
+            </div>
+            <div className="rounded-lg border bg-card p-6">
+              <dt className="font-semibold">Passenger Capacity</dt>
+              <dd className="mt-2 text-muted-foreground">Up to 6 passengers per flight</dd>
+            </div>
+            <div className="rounded-lg border bg-card p-6">
+              <dt className="font-semibold">Recovery System</dt>
+              <dd className="mt-2 text-muted-foreground">Autonomous landing capability at multiple sites</dd>
+            </div>
+          </dl>
+        </div>
       </div>
     </section>
   )
