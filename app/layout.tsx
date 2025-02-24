@@ -1,10 +1,10 @@
 import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
-import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from "@/components/ui/toaster"
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
+import { ThemeProvider } from "../components/theme-provider"
+import { Toaster } from "../components/ui/toaster"
+import Navbar from "../components/navbar"
+import Footer from "../components/footer"
 
 export const metadata: Metadata = {
   title: "Stratos - Hypersonic Spaceplanes",
