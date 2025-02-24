@@ -3,35 +3,38 @@ import Image from "next/image"
 
 export function AboutContent() {
   return (
-    <section className="container py-24">
-      <div className="mx-auto max-w-5xl">
-        <div className="grid gap-12 md:grid-cols-2 md:items-center">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight">Our Story</h2>
-            <div className="mt-4 space-y-4 text-muted-foreground">
-              <p>
-                Founded in 2020, Stratos emerged from a vision to revolutionize space access through innovative
-                hypersonic technology. Our team of aerospace veterans and pioneering engineers came together with a
-                shared mission: to create a truly reusable spaceplane that would transform the economics of space
-                transportation.
-              </p>
-              <p>
-                Through breakthrough developments in combined-cycle propulsion and advanced materials, we've created a
-                platform that delivers unprecedented flexibility and efficiency in space access.
-              </p>
-            </div>
+    <section className="py-24 bg-muted/50">
+      <div className="container">
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our Story</h2>
+          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            Founded in 2024, Stratos emerged from a simple yet ambitious vision: to create a more accessible path to space.
+            Our founders, combining decades of experience in aerospace engineering and propulsion technology, set out to
+            develop a revolutionary spaceplane that would transform space travel.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <div className="flex flex-col items-start">
+            <h3 className="text-lg font-semibold leading-8">Innovation</h3>
+            <p className="mt-4 text-base leading-7 text-muted-foreground">
+              Our combined-cycle propulsion system represents a breakthrough in aerospace technology, seamlessly transitioning
+              from air-breathing to rocket propulsion for optimal efficiency at all altitudes.
+            </p>
           </div>
-          <Card>
-            <CardContent className="p-2">
-              <Image
-                src="/placeholder.svg?height=400&width=600"
-                alt="Stratos facility"
-                width={600}
-                height={400}
-                className="rounded-lg"
-              />
-            </CardContent>
-          </Card>
+          <div className="flex flex-col items-start">
+            <h3 className="text-lg font-semibold leading-8">Sustainability</h3>
+            <p className="mt-4 text-base leading-7 text-muted-foreground">
+              We're committed to developing fully reusable spacecraft that minimize environmental impact while maximizing
+              operational efficiency and flight frequency.
+            </p>
+          </div>
+          <div className="flex flex-col items-start">
+            <h3 className="text-lg font-semibold leading-8">Accessibility</h3>
+            <p className="mt-4 text-base leading-7 text-muted-foreground">
+              By reducing launch costs and increasing flight frequency, we're making space more accessible for scientific
+              research, commercial applications, and future space exploration.
+            </p>
+          </div>
         </div>
       </div>
     </section>
