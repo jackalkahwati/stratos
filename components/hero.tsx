@@ -19,15 +19,13 @@ export default function Hero() {
       </div>
       <div className="container relative flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center space-y-8 py-24 text-center">
         <h1 className="animate-fade-up text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-          The Next Evolution in{" "}
+          Pioneering{" "}
           <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-            Hypersonic Spaceflight
+            AI-Driven Hypersonic Propulsion
           </span>
         </h1>
         <p className="animate-fade-up mx-auto max-w-[50rem] text-lg leading-normal text-gray-300 sm:text-xl sm:leading-8">
-          Welcome to Stratos, where next-generation propulsion is redefining the future of orbital access and high-speed
-          transportation. Our spaceplane, powered by a combined-cycle ramjet, scramjet, and rocket propulsion system, is
-          designed to achieve unparalleled speed, reusability, and efficiency.
+          At Stratos, we're revolutionizing aerospace with AI-optimized hypersonic engine design. Our helium-enhanced combined-cycle propulsion system, validated through advanced computational modeling and wind tunnel testing, is ready for flight testing in 2026.
         </p>
         <div className="animate-fade-up flex flex-col gap-4 min-[400px]:flex-row">
           <Link href="/technology">
@@ -43,13 +41,13 @@ export default function Hero() {
         </div>
         <div className="animate-fade-up grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div className="rounded-lg border bg-background/50 px-6 py-4 backdrop-blur transition-all hover:scale-105 hover:bg-background/70">
-            <p className="font-semibold text-white">Mach 10+ Hypersonic Flight</p>
+            <p className="font-semibold text-white">AI-Optimized Design</p>
           </div>
           <div className="rounded-lg border bg-background/50 px-6 py-4 backdrop-blur transition-all hover:scale-105 hover:bg-background/70">
-            <p className="font-semibold text-white">Fully Reusable Spaceplane</p>
+            <p className="font-semibold text-white">Helium-Enhanced Propulsion</p>
           </div>
           <div className="rounded-lg border bg-background/50 px-6 py-4 backdrop-blur transition-all hover:scale-105 hover:bg-background/70">
-            <p className="font-semibold text-white">Horizontal Takeoff & Landing</p>
+            <p className="font-semibold text-white">2026 Flight Testing</p>
           </div>
         </div>
       </div>

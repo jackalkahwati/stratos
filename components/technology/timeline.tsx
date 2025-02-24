@@ -4,32 +4,32 @@ const milestones = [
   {
     year: "2025",
     title: "Company Founded",
-    description: "Stratos established with initial funding and core team assembly.",
+    description: "Stratos established with initial funding and core team assembly focused on hypersonic propulsion.",
   },
   {
-    year: "2026",
-    title: "Engine Development",
-    description: "Successful testing of subscale combined-cycle engine prototype.",
+    year: "2025",
+    title: "AI-Driven Engine Design",
+    description: "Leveraging advanced AI for rapid engine design optimization, CFD analysis, thermal modeling, and FEA validation.",
   },
   {
-    year: "2027",
-    title: "Materials Testing",
-    description: "Validation of thermal protection system and structural materials.",
+    year: "2025",
+    title: "Helium System Integration",
+    description: "Development of revolutionary helium-enhanced propulsion system for improved performance and thermal management.",
   },
   {
-    year: "2028",
-    title: "Subsystem Integration",
-    description: "Integration and testing of major vehicle subsystems.",
+    year: "2026 Q1",
+    title: "Wind Tunnel Testing",
+    description: "Comprehensive wind tunnel testing campaign for engine validation and performance verification.",
   },
   {
-    year: "2029",
-    title: "First Prototype",
-    description: "Completion of full-scale prototype vehicle assembly.",
+    year: "2026 Q2",
+    title: "System Integration",
+    description: "Integration of combined-cycle engine components, helium injection system, and advanced control systems.",
   },
   {
-    year: "2030",
-    title: "Flight Testing",
-    description: "Beginning of atmospheric flight test campaign.",
+    year: "2026 Q4",
+    title: "First Flight Test",
+    description: "Initial flight testing of the integrated propulsion system, validating our AI-driven design approach.",
   },
 ]
 
