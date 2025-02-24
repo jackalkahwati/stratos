@@ -2,22 +2,16 @@ import Image from "next/image"
 
 const team = [
   {
-    name: "Dr. Sarah Chen",
+    name: "Martin Diz",
     role: "Chief Executive Officer",
-    image: "/team/sarah-chen.jpg",
-    bio: "Former NASA propulsion engineer with 15 years of experience in aerospace innovation.",
+    image: "/placeholder.svg",
+    bio: "Aerospace industry veteran with extensive experience in hypersonic propulsion systems and space technology.",
   },
   {
-    name: "Marcus Rodriguez",
+    name: "Jack Al-Kahwati",
     role: "Chief Technology Officer",
-    image: "/team/marcus-rodriguez.jpg",
-    bio: "Pioneering engineer with multiple patents in hypersonic propulsion systems.",
-  },
-  {
-    name: "Dr. James Wilson",
-    role: "Chief Operations Officer",
-    image: "/team/james-wilson.jpg",
-    bio: "20+ years experience in spacecraft manufacturing and mission operations.",
+    image: "/placeholder.svg",
+    bio: "Former SpaceX propulsion engineer, specializing in combined-cycle engines and reusable launch systems.",
   },
 ]
 
@@ -33,7 +27,7 @@ export function TeamSection() {
         </div>
         <ul
           role="list"
-          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none"
         >
           {team.map((person) => (
             <li key={person.name}>
