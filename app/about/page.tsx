@@ -1,7 +1,7 @@
-import { AboutHero } from "@/components/about/hero"
-import { AboutContent } from "@/components/about/content"
-import { TeamSection } from "@/components/about/team"
-import { Vision } from "@/components/about/vision"
+import { AboutHero } from "../../components/about/hero"
+import { AboutContent } from "../../components/about/content"
+import { TeamSection } from "../../components/about/team"
+import { Vision } from "../../components/about/vision"
 
 export default function AboutPage() {
   return (
