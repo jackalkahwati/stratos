@@ -91,7 +91,7 @@ const comparisonData = [
     metric: "Time to Launch",
     Starship: 60,
     Falcon: 50,
-    "SSTO Hypersonic": 85,
+    "Stratos": 85,
     "Heavy Rocket": 40,
     "Space Force Ideal": 90,
   },
@@ -99,7 +99,7 @@ const comparisonData = [
     metric: "Reusability",
     Starship: 80,
     Falcon: 60,
-    "SSTO Hypersonic": 90,
+    "Stratos": 90,
     "Heavy Rocket": 30,
     "Space Force Ideal": 95,
   },
@@ -107,7 +107,7 @@ const comparisonData = [
     metric: "Speed",
     Starship: 75,
     Falcon: 65,
-    "SSTO Hypersonic": 85,
+    "Stratos": 85,
     "Heavy Rocket": 70,
     "Space Force Ideal": 90,
   },
@@ -115,7 +115,7 @@ const comparisonData = [
     metric: "Cost",
     Starship: 70,
     Falcon: 60,
-    "SSTO Hypersonic": 75,
+    "Stratos": 75,
     "Heavy Rocket": 40,
     "Space Force Ideal": 85,
   },
@@ -123,7 +123,7 @@ const comparisonData = [
     metric: "Scalability",
     Starship: 85,
     Falcon: 65,
-    "SSTO Hypersonic": 70,
+    "Stratos": 70,
     "Heavy Rocket": 50,
     "Space Force Ideal": 90,
   },
@@ -131,7 +131,7 @@ const comparisonData = [
     metric: "Maintenance Ease",
     Starship: 65,
     Falcon: 60,
-    "SSTO Hypersonic": 70,
+    "Stratos": 70,
     "Heavy Rocket": 45,
     "Space Force Ideal": 85,
   },
@@ -139,7 +139,7 @@ const comparisonData = [
     metric: "Reliability",
     Starship: 75,
     Falcon: 85,
-    "SSTO Hypersonic": 70,
+    "Stratos": 70,
     "Heavy Rocket": 80,
     "Space Force Ideal": 95,
   },
@@ -147,7 +147,7 @@ const comparisonData = [
     metric: "Environmental Impact",
     Starship: 60,
     Falcon: 55,
-    "SSTO Hypersonic": 75,
+    "Stratos": 75,
     "Heavy Rocket": 40,
     "Space Force Ideal": 90,
   },
@@ -155,7 +155,7 @@ const comparisonData = [
     metric: "Operational Complexity",
     Starship: 50,
     Falcon: 60,
-    "SSTO Hypersonic": 65,
+    "Stratos": 65,
     "Heavy Rocket": 45,
     "Space Force Ideal": 80,
   },
@@ -163,7 +163,7 @@ const comparisonData = [
     metric: "Heat Resistance",
     Starship: 75,
     Falcon: 70,
-    "SSTO Hypersonic": 85,
+    "Stratos": 85,
     "Heavy Rocket": 65,
     "Space Force Ideal": 90,
   },
@@ -171,7 +171,7 @@ const comparisonData = [
     metric: "Fuel Efficiency",
     Starship: 70,
     Falcon: 65,
-    "SSTO Hypersonic": 80,
+    "Stratos": 80,
     "Heavy Rocket": 55,
     "Space Force Ideal": 85,
   },
@@ -181,14 +181,44 @@ const ComparisonChart = () => {
   return (
     <ResponsiveContainer width="100%" height={500}>
       <RadarChart data={comparisonData}>
-        <PolarGrid />
-        <PolarAngleAxis dataKey="metric" />
-        <PolarRadiusAxis />
-        <Radar name="Starship" dataKey="Starship" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-        <Radar name="Falcon" dataKey="Falcon" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
-        <Radar name="SSTO Hypersonic" dataKey="SSTO Hypersonic" stroke="#ffc658" fill="#ffc658" fillOpacity={0.6} />
-        <Radar name="Heavy Rocket" dataKey="Heavy Rocket" stroke="#ff7300" fill="#ff7300" fillOpacity={0.6} />
-        <Radar name="Space Force Ideal" dataKey="Space Force Ideal" stroke="#0088fe" fill="#0088fe" fillOpacity={0.6} />
+        <PolarGrid stroke="#666" />
+        <PolarAngleAxis dataKey="metric" stroke="#888" />
+        <PolarRadiusAxis stroke="#666" />
+        <Radar 
+          name="Starship" 
+          dataKey="Starship" 
+          stroke="#FF4444" 
+          fill="none" 
+          strokeWidth={2}
+        />
+        <Radar 
+          name="Falcon" 
+          dataKey="Falcon" 
+          stroke="#44FF44" 
+          fill="none" 
+          strokeWidth={2}
+        />
+        <Radar 
+          name="Stratos" 
+          dataKey="Stratos" 
+          stroke="#4444FF" 
+          fill="none" 
+          strokeWidth={2}
+        />
+        <Radar 
+          name="Heavy Rocket" 
+          dataKey="Heavy Rocket" 
+          stroke="#FF44FF" 
+          fill="none" 
+          strokeWidth={2}
+        />
+        <Radar 
+          name="Space Force Ideal" 
+          dataKey="Space Force Ideal" 
+          stroke="#FFFF44" 
+          fill="none" 
+          strokeWidth={2}
+        />
         <Legend />
       </RadarChart>
     </ResponsiveContainer>
@@ -197,118 +227,132 @@ const ComparisonChart = () => {
 
 export default function Technology() {
   return (
-    <section className="py-24">
-      <div className="container">
+    <div className="space-y-24">
+      <section className="py-24">
+        <div className="container">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our Technology</h2>
+            <p className="mt-4 text-muted-foreground">
+              Pioneering the next generation of space access with our innovative spaceplane technology.
+            </p>
+          </div>
+          <div className="mx-auto mt-16">
+            <Tabs defaultValue="propulsion" className="space-y-8">
+              <TabsList className="grid w-full grid-cols-3">
+                <TabsTrigger value="propulsion">Propulsion</TabsTrigger>
+                <TabsTrigger value="aerodynamics">Aerodynamics</TabsTrigger>
+                <TabsTrigger value="materials">Materials</TabsTrigger>
+              </TabsList>
+              <TabsContent value="propulsion" className="space-y-4">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Combined-Cycle Engine</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>
+                      Our revolutionary propulsion system seamlessly transitions between air-breathing and rocket modes,
+                      enabling efficient operation from sea level to orbital velocity.
+                    </p>
+                  </CardContent>
+                </Card>
+                <div className="grid gap-4 md:grid-cols-2">
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Ramjet Mode</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p>Efficient supersonic propulsion from Mach 3 to Mach 6.</p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Scramjet Mode</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p>Advanced hypersonic propulsion from Mach 6 to Mach 12.</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </TabsContent>
+              <TabsContent value="aerodynamics" className="space-y-4">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Waverider Design</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>
+                      Advanced aerodynamic configuration that uses the shock wave generated by the vehicle to enhance lift
+                      and reduce drag at hypersonic speeds.
+                    </p>
+                  </CardContent>
+                </Card>
+                <div className="grid gap-4 md:grid-cols-2">
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Variable Geometry</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p>Adaptable wing configuration for optimal performance across all speed regimes.</p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Thermal Management</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p>Innovative cooling systems to handle extreme temperatures during hypersonic flight.</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </TabsContent>
+              <TabsContent value="materials" className="space-y-4">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Advanced Composites</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>
+                      Cutting-edge materials that combine lightweight properties with exceptional strength and thermal
+                      resistance.
+                    </p>
+                  </CardContent>
+                </Card>
+                <div className="grid gap-4 md:grid-cols-2">
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Thermal Protection</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p>Next-generation heat shields for reliable atmospheric reentry.</p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Propulsion Materials</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p>High-temperature alloys and ceramics for engine components.</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </TabsContent>
+            </Tabs>
+          </div>
+        </div>
+      </section>
+      
+      <section className="container py-24">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our Technology</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Technology Comparison</h2>
           <p className="mt-4 text-muted-foreground">
-            Pioneering the next generation of space access with our innovative spaceplane technology.
+            How our spaceplane technology compares to existing launch systems.
           </p>
         </div>
-        <div className="mx-auto mt-16">
-          <Tabs defaultValue="propulsion" className="space-y-8">
-            <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="propulsion">Propulsion</TabsTrigger>
-              <TabsTrigger value="aerodynamics">Aerodynamics</TabsTrigger>
-              <TabsTrigger value="materials">Materials</TabsTrigger>
-            </TabsList>
-            <TabsContent value="propulsion" className="space-y-4">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Combined-Cycle Engine</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Our revolutionary propulsion system seamlessly transitions between air-breathing and rocket modes,
-                    enabling efficient operation from sea level to orbital velocity.
-                  </p>
-                </CardContent>
-              </Card>
-              <div className="grid gap-4 md:grid-cols-2">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Ramjet Mode</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>Efficient supersonic propulsion from Mach 3 to Mach 6.</p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Scramjet Mode</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>Advanced hypersonic propulsion from Mach 6 to Mach 12.</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </TabsContent>
-            <TabsContent value="aerodynamics" className="space-y-4">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Waverider Design</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Advanced aerodynamic configuration that uses the shock wave generated by the vehicle to enhance lift
-                    and reduce drag at hypersonic speeds.
-                  </p>
-                </CardContent>
-              </Card>
-              <div className="grid gap-4 md:grid-cols-2">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Variable Geometry</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>Adaptable wing configuration for optimal performance across all speed regimes.</p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Thermal Management</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>Innovative cooling systems to handle extreme temperatures during hypersonic flight.</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </TabsContent>
-            <TabsContent value="materials" className="space-y-4">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Advanced Composites</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Cutting-edge materials that combine lightweight properties with exceptional strength and thermal
-                    resistance.
-                  </p>
-                </CardContent>
-              </Card>
-              <div className="grid gap-4 md:grid-cols-2">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Thermal Protection</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>Next-generation heat shields for reliable atmospheric reentry.</p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Propulsion Materials</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>High-temperature alloys and ceramics for engine components.</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </TabsContent>
-          </Tabs>
+        <div className="mt-16">
+          <ComparisonChart />
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   )
 }
 

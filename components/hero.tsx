@@ -1,19 +1,30 @@
 import { Button } from "./ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Hero() {
   return (
     <section className="relative">
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/90 to-background/50" />
+      <div className="absolute inset-0">
+        <Image
+          src="/images/stratos.jpg"
+          alt="Stratos spacecraft"
+          width={1920}
+          height={1080}
+          className="object-cover w-full h-full brightness-50"
+          priority
+          quality={100}
+        />
+      </div>
       <div className="container relative flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center space-y-8 py-24 text-center">
-        <h1 className="animate-fade-up text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="animate-fade-up text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
           The Next Evolution in{" "}
           <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
             Hypersonic Spaceflight
           </span>
         </h1>
-        <p className="animate-fade-up mx-auto max-w-[50rem] text-lg leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+        <p className="animate-fade-up mx-auto max-w-[50rem] text-lg leading-normal text-gray-300 sm:text-xl sm:leading-8">
           Welcome to Stratos, where next-generation propulsion is redefining the future of orbital access and high-speed
           transportation. Our spaceplane, powered by a combined-cycle ramjet, scramjet, and rocket propulsion system, is
           designed to achieve unparalleled speed, reusability, and efficiency.
@@ -32,13 +43,13 @@ export default function Hero() {
         </div>
         <div className="animate-fade-up grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div className="rounded-lg border bg-background/50 px-6 py-4 backdrop-blur transition-all hover:scale-105 hover:bg-background/70">
-            <p className="font-semibold">Mach 10+ Hypersonic Flight</p>
+            <p className="font-semibold text-white">Mach 10+ Hypersonic Flight</p>
           </div>
           <div className="rounded-lg border bg-background/50 px-6 py-4 backdrop-blur transition-all hover:scale-105 hover:bg-background/70">
-            <p className="font-semibold">Fully Reusable Spaceplane</p>
+            <p className="font-semibold text-white">Fully Reusable Spaceplane</p>
           </div>
           <div className="rounded-lg border bg-background/50 px-6 py-4 backdrop-blur transition-all hover:scale-105 hover:bg-background/70">
-            <p className="font-semibold">Horizontal Takeoff & Landing</p>
+            <p className="font-semibold text-white">Horizontal Takeoff & Landing</p>
           </div>
         </div>
       </div>

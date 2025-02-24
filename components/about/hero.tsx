@@ -1,9 +1,11 @@
+import Image from "next/image"
+
 export function AboutHero() {
   return (
-    <section className="relative py-24">
-      <div className="container relative z-10">
+    <section className="relative w-full min-h-[60vh] bg-gradient-to-br from-background via-background/90 to-background/50">
+      <div className="container relative z-10 py-24">
         <div className="mx-auto max-w-2xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
             Pioneering the Future of{" "}
             <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
               Space Travel
@@ -16,7 +18,6 @@ export function AboutHero() {
           </p>
         </div>
       </div>
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_45%_at_50%_50%,rgba(56,189,248,0.1),rgba(255,255,255,0))]" />
     </section>
   )
 }

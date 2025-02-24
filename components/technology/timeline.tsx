@@ -2,34 +2,34 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
 
 const milestones = [
   {
-    year: "2020",
+    year: "2025",
     title: "Company Founded",
     description: "Stratos established with initial funding and core team assembly.",
   },
   {
-    year: "2021",
+    year: "2026",
     title: "Engine Development",
     description: "Successful testing of subscale combined-cycle engine prototype.",
   },
   {
-    year: "2022",
+    year: "2027",
     title: "Materials Testing",
     description: "Validation of thermal protection system and structural materials.",
   },
   {
-    year: "2023",
+    year: "2028",
     title: "Subsystem Integration",
     description: "Integration and testing of major vehicle subsystems.",
   },
   {
-    year: "2024",
+    year: "2029",
     title: "First Prototype",
     description: "Completion of full-scale prototype vehicle assembly.",
   },
   {
-    year: "2025",
+    year: "2030",
     title: "Flight Testing",
-    description: "Planned beginning of atmospheric flight test campaign.",
+    description: "Beginning of atmospheric flight test campaign.",
   },
 ]
 
