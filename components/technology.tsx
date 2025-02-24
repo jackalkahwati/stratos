@@ -47,7 +47,7 @@ const heliumBenefits = [
     icon: Zap,
     title: "Thrust Augmentation & Increased Specific Impulse",
     description:
-      "Helium's low molecular weight enhances exhaust expansion and increases exit velocity, improving overall engine performance.",
+      "Our patented helium injection system enhances exhaust expansion and increases exit velocity, leveraging helium's low molecular weight for optimal performance.",
     details: [
       "Enhanced exhaust expansion",
       "Increased exit velocity",
@@ -57,11 +57,11 @@ const heliumBenefits = [
   },
   {
     icon: Thermometer,
-    title: "Thermal Management for Hypersonic Flight",
+    title: "Advanced Thermal Management",
     description:
-      "Advanced cooling capabilities for extreme hypersonic conditions using helium's unique thermal properties.",
+      "Helium's exceptional thermal properties enable superior cooling and heat distribution throughout the propulsion system.",
     details: [
-      "Combustor wall cooling",
+      "Active combustor wall cooling",
       "Nozzle thermal protection",
       "Hot spot prevention",
       "Enhanced energy efficiency",
@@ -69,20 +69,25 @@ const heliumBenefits = [
   },
   {
     icon: Target,
-    title: "Infrared Stealth Capabilities",
-    description: "Significant reduction in thermal signature through strategic helium injection in the exhaust stream.",
+    title: "Military-Grade Stealth Capabilities",
+    description: "Strategic helium injection in the exhaust stream dramatically reduces thermal signature, enhancing mission capabilities.",
     details: [
       "Reduced IR signature",
-      "Enhanced stealth capabilities",
-      "Temperature reduction",
+      "Enhanced stealth profile",
+      "Temperature optimization",
       "Military applications",
     ],
   },
   {
     icon: Settings,
-    title: "Combustion Stability & Efficiency",
-    description: "Improved combustion characteristics and stability at hypersonic velocities through helium injection.",
-    details: ["Stabilized combustion", "Reduced turbulence", "Better thrust modulation", "Optimized performance"],
+    title: "Multi-Regime Performance",
+    description: "Variable helium injection enables optimal performance across all flight regimes, from takeoff to orbital insertion.",
+    details: [
+      "Stabilized combustion",
+      "Smooth regime transitions",
+      "Precise thrust control",
+      "Adaptive performance",
+    ],
   },
 ]
 
