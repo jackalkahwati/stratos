@@ -1,5 +1,3 @@
-import { PrivacyContent } from "@/components/legal/privacy-content"
-
 export default function PrivacyPage() {
   return (
     <main className="container py-24">
